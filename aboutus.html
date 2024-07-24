@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 0;
+            background-image: url(../fondo.jpg);
+            width: 100%;
+            height: 100vh;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+           
+        }
+        button {
+            color: white;
+            background-color: rgb(24, 124, 231);
+            border-radius: 5px;
+            width: 40%;
+            height: 8%;
+            margin-left: 20px;
+            margin-bottom: 50px;
+            margin-top: 0px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            cursor: pointer;
+            font-size: 30px;
+        }
+        .submit{
+            color: white;
+        }
+        button:active{
+            color:rgb(115, 208, 240);
+            background-color: rgb(95, 194, 251);
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            margin-right: 0%;
+            align-items: flex-start;
+            gap: 80px;
+            color:rgb(39, 39, 131);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        nav{
+            color: rgb(39, 39, 131);
+            font-size: 23px;
+            margin-left: 23px;
+            margin-top: 1.5%;
+            cursor: pointer;
+        }
+        .perfil{
+            width: 50px;
+            height: 50px;
+            margin-right: 0%;
+            margin-left: 0%;
+            cursor: pointer;
+        }
+        .logo{
+            width: 75px;
+            height: 60px;
+            margin-top: 0%;
+            margin-left: 20%;
+            padding: 0px;
+            border: 0px;
+            animation-name: fadeIn;
+        }
+        #ABOUT-US{
+        text-shadow: 2px 4px 10px rgb(62, 81, 209);
+        }
+        .menu:hover{
+            text-decoration: underline;
+        }
+        a{
+            color: rgb(39, 39, 131);
+            text-decoration: none;
+        }
+        h1{
+            color: rgb(16, 60, 135);
+            text-align: center;
+        }
+</style>
+<header>
+    <figure>
+           <img src="../logo.png" alt="logo" class="logo">
+        </figure>
+        <nav class="menu"> <a href="../pantalla_inicio/inicio.html"> HOME </a> </nav> 
+        <nav class="menu"> <a href="./newpatient.html"> NEW PATIENT </a> </nav>
+        <nav class="menu"> <a href="../pantalla_formerpatient/formerpatient.html"> FORMER PATIENT </a></nav>
+        <nav class="menu" id="ABOUT-US"> <a href="../pantalla_aboutus/aboutus.html"> ABOUT US</a></nav>
+        <figure>
+            <img src="../perfil.png" alt="perfil" class="perfil">
+        </figure>
+    </header>
+
+    <h1> Que proyecto super cool muy top la front end developer!!</h1>
+
+</body>
+</html>

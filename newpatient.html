@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="imagenes" type="imagenes" href="../FRONT 2024/imagenes/fondo.png">
+    <link rel="imagenes" type="imagenes" href="../FRONT 2024/imagenes/logo.png">
+    <link rel="imagenes" type="imagenes" href="../FRONT 2024/imagenes/medicos.png">
+    <link rel="imagenes" type="imagenes" href="../FRONT 2024/imagenes/perfil.png">
+</head>
+<body>
+    <style>
+body{
+    margin: 0;
+    background-image: url(../fondo.jpg);
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+   
+}
+button {
+    color: white;
+    background-color: rgb(24, 124, 231);
+    border-radius: 5px;
+    width: 40%;
+    height: 8%;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    font-size: 30px;
+}
+.submit{
+    color: white;
+}
+button:active{
+    color:rgb(115, 208, 240);
+    background-color: rgb(95, 194, 251);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-right: 0%;
+    align-items: flex-start;
+    gap: 80px;
+    color:rgb(39, 39, 131);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+nav{
+    color: rgb(39, 39, 131);
+    font-size: 23px;
+    margin-left: 23px;
+    margin-top: 1.5%;
+    cursor: pointer;
+}
+.perfil{
+    width: 50px;
+    height: 50px;
+    margin-right: 0%;
+    margin-left: 0%;
+    cursor: pointer;
+}
+.logo{
+    width: 75px;
+    height: 60px;
+    margin-top: 0%;
+    margin-left: 20%;
+    padding: 0px;
+    border: 0px;
+    animation-name: fadeIn;
+}
+#NEW-PATIENT{
+text-shadow: 2px 4px 10px rgb(62, 81, 209);
+}
+.menu:hover{
+    text-decoration: underline;
+}
+h1{
+    color: rgb(39, 39, 131);
+    margin-top: 6px;
+    margin-left: 320px;
+    font-size: 70px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+form{
+    justify-content: center;
+    display: flex;
+    color: rgb(62, 81, 209);
+}
+.label{
+    color: rgb(39, 39, 131);
+    width: 200px;
+}
+input{
+    background-color: transparent;
+    margin-bottom: 18px;
+    margin-left: 0px;
+    margin-right: 15px;
+    margin-top: 1px;
+    border: none;
+    height: 30px;
+    width: 300px;
+    font-style: italic;
+    font-size: 16px;
+    color: rgb(39, 39, 131);
+}
+input::placeholder{
+    color:rgb(39, 39, 131);
+    opacity: 0.5;
+    text-indent: 10px;
+}
+td{
+    color: rgb(39, 39, 131);
+}
+a{
+   color: rgb(39, 39, 131);
+   text-decoration: none;
+}
+container{
+    color: rgb(58, 179, 254);
+    background-color:none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+    width: 530px;
+    height: 420px;
+    margin-top: 520px;
+}
+.data{
+    color: rgb(39, 39, 131);
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    width: 800px;
+    height: 620px;
+    margin-top: 6px;
+    background-image: url('../medicos.png');
+    background-size: cover; 
+    background-position: center;
+}
+table{
+    color: rgb(39, 39, 131);
+    border-style: groove;
+    border-color: rgb(39, 39, 131);
+}
+.form-group{
+    align-items:flex-start;
+    flex-direction: column;
+    z-index: 1;
+}
+.subrayado{
+    border-bottom: 1px solid rgb(39, 39, 131);
+    display: flex;
+    flex: 1;
+    
+}
+.formulario-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 460px; 
+  height: 400px;
+  margin-top: 550px;
+  margin-left: 490px;
+  transform: translate(-50%, -50%);
+}
+#id{
+    margin-top: 10px;
+}
+#name{
+    margin-top: 10px;
+}
+#obrasocial{
+    margin-top: 10px;
+}
+#email{
+    margin-top: 10px;
+}
+#date{
+    margin-top: 10px;
+}
+#medical{
+    margin-top: 140px;
+}
+.hidden {
+    display: none;
+}
+.table-container {
+margin-top: 20px;
+background-color: antiquewhite;
+}
+
+table{
+    border-collapse: collapse;
+    border-radius: 110px;
+    margin-top: 30px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #15508f;
+  color: white;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  text-align: center;
+  border: none; 
+  background-color: transparent; 
+  margin-left: 0%;
+}
+
+tr:nth-child(odd) td {
+  background-color: #c7c6c6;
+}
+
+.submit-btn {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    margin: 50px auto 0;
+    background-color: #15508f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 23px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.submit-btn:hover {
+    background-color: rgb(80, 151, 227);
+}
+
+.submit-btn:active {
+    background-color: rgb(10, 65, 122);
+}
+form{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+    </style>
+<header>
+<figure>
+       <img src="../logo.png" alt="logo" class="logo">
+    </figure>
+    <nav class="menu"> <a href="../pantalla_inicio/inicio.html"> HOME </a> </nav> 
+    <nav class="menu" id="NEW-PATIENT"> NEW PATIENT </nav>
+    <nav class="menu"> <a href="../pantalla_formerpatient/formerpatient.html"> FORMER PATIENT </a></nav>
+    <nav class="menu"> <a href="./aboutus.html"> ABOUT US</a></nav>
+    <figure>
+        <img src="../perfil.png" alt="perfil" class="perfil">
+    </figure>
+</header>
+    <section class="fondo">
+        <h1>Add a new patient</h1>
+       
+        <div id="form-container">
+        <form onSubmit="return sendRequest(event)" id="myForm">  
+            <container class="data"> 
+            <div class="formulario-contenedor">  
+            <div class="form-group">
+                    <label class="label">NAME AND SURNAME:</label>
+                    <input class="subrayado" type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label class="label" id="medical">MEDICAL ASSURANCE:</label>
+                    <input class="subrayado" type="number" id="obrasocial" required>
+                </div>
+                <div class="form-group">
+                    <label class="label" >ID:</label>
+                    <input class="subrayado" type="number" id="id" required>
+                </div>
+                <div class="form-group" >
+                    <label class="label">EMAIL ADRESS:</label>
+                    <input class="subrayado" type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label class="label">DATE OF BIRTH:</label>
+                    <input class="subrayado" type="datetime" id="date" required>
+                </div>
+            </div>    
+            <button class="submit">Submit</button>
+            </container>
+        </form>  
+        </div>
+
+        <form onSubmit="return sendRequest(event)" id="table-container" class="hidden">
+            <table border="1">
+              <thead>
+                <tr>
+                    <th>FEV1 Pre-BD Value</th>
+                    <th>FEV1 Pre-BD Pred</th>
+                    <th>FEV1 Post-BD Value</th>
+                    <th>FEV1 Post-BD Pred</th>
+                </tr>
+              </thead>
+              <tbody id="table-body">
+                <tr>
+                    <td><input type="text" name="fev1_pre_bd_value" /></td>
+                    <td><input type="text" name="fev1_pre_bd_pred" /></td>
+                    <td><input type="text" name="fev1_post_bd_value" /></td>
+                    <td><input type="text" name="fev1_post_bd_pred" /></td>
+                  </tr>
+                  <tr>
+                    <th>FVC Pre-BD Value</th>
+                    <th>FVC Pre-BD Pred</th>
+                    <th>FVC Post-BD Value</th>
+                    <th>FVC Post-BD Pred</th>
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="fvc_pre_bd_value_2" /></td>
+                    <td><input type="text" name="fvc_pre_bd_pred_2" /></td>
+                    <td><input type="text" name="fvc_post_bd_value_2" /></td>
+                    <td><input type="text" name="fvc_post_bd_pred_2" /></td>
+                  </tr>
+                  <tr>
+                    <th>FEF Pre-BD Value</th>
+                    <th>FEF Pre-BD Pred</th>
+                    <th>FEF Post-BD Value</th>
+                    <th>FEF Post-BD Pred</th>
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="fef_pre_bd_value_3" /></td>
+                    <td><input type="text" name="fef_pre_bd_pred_3" /></td>
+                    <td><input type="text" name="fef_post_bd_value_3" /></td>
+                    <td><input type="text" name="fef_post_bd_pred_3" /></td>
+                  </tr>
+              </tbody>
+            </table>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+       <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const form = document.getElementById('myForm');
+              const formContainer = document.getElementById('form-container');
+              const tableContainer = document.getElementById('table-container');
+              const tableBody = document.getElementById('table-body');
+        
+              form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Evita el envío del formulario de la forma tradicional
+        
+                // Oculta el formulario y muestra la tabla
+                formContainer.classList.add('hidden');
+                tableContainer.classList.remove('hidden');
+              });
+            });
+          </script> 
+</section>
+</body>
+</html>
