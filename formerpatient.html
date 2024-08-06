@@ -21,7 +21,7 @@ body{
     background-position: center;
    
 }
-button {
+/*button {
     color: white;
     background-color: rgb(24, 124, 231);
     border-radius: 5px;
@@ -29,6 +29,7 @@ button {
     height: 8%;
     margin-left: 20px;
     margin-bottom: 50px;
+    margin-top: 0px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     cursor: pointer;
     font-size: 30px;
@@ -39,7 +40,7 @@ button {
 button:active{
     color:rgb(115, 208, 240);
     background-color: rgb(95, 194, 251);
-}
+} */
 header {
     display: flex;
     justify-content: space-between;
@@ -73,7 +74,7 @@ nav{
     border: 0px;
     animation-name: fadeIn;
 }
-#NEW-PATIENT{
+#FORMER-PATIENT{
 text-shadow: 2px 4px 10px rgb(62, 81, 209);
 }
 .menu:hover{
@@ -82,7 +83,7 @@ text-shadow: 2px 4px 10px rgb(62, 81, 209);
 h1{
     color: rgb(39, 39, 131);
     margin-top: 6px;
-    margin-left: 320px;
+    margin-left: 290px;
     font-size: 70px;
     font-family:Arial, Helvetica, sans-serif;
     font-weight: lighter;
@@ -97,7 +98,7 @@ form{
     color: rgb(39, 39, 131);
     width: 200px;
 }
-input{
+/*input{
     background-color: transparent;
     margin-bottom: 18px;
     margin-left: 0px;
@@ -114,7 +115,7 @@ input::placeholder{
     color:rgb(39, 39, 131);
     opacity: 0.5;
     text-indent: 10px;
-}
+} */
 td{
     color: rgb(39, 39, 131);
 }
@@ -132,7 +133,7 @@ container{
     width: 530px;
     height: 420px;
     margin-top: 520px;
-}
+} 
 .data{
     color: rgb(39, 39, 131);
     background-color:white;
@@ -208,8 +209,7 @@ background-color: antiquewhite;
 table{
     border-collapse: collapse;
     border-radius: 110px;
-    margin-right: 37%;
-    width: auto;
+    margin-top: 30px;
 }
 
 th, td {
@@ -223,7 +223,7 @@ th {
   color: white;
 }
 
-input[type="text"] {
+/*input[type="text"] {
   width: 100%;
   padding: 30px;
   box-sizing: border-box;
@@ -232,31 +232,17 @@ input[type="text"] {
   border: none; 
   background-color: transparent; 
   margin-left: 0%;
-  width: 100%;
-  width: 200px; /* Ajusta el tamaño según el contenedor */
-  margin-right: 100px; /* Espacio entre el input y el h2 */
-}
+}*/
 
 tr:nth-child(odd) td {
   background-color: #c7c6c6;
-}
-
-.right-heading {
-    margin-left: 600px; /* Espacio entre el input y el h2 */
-    margin: 0;
-}
-
-.input-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Alinea los elementos al inicio del contenedor */
 }
 
 .submit-btn {
     display: block;
     width: 200px;
     padding: 10px;
-    margin: 100px auto 0;
+    margin: 50px auto 0;
     background-color: #15508f;
     color: white;
     border: none;
@@ -273,104 +259,86 @@ tr:nth-child(odd) td {
 .submit-btn:active {
     background-color: rgb(10, 65, 122);
 }
-form{
+/*form{
     display: flex;
     flex-direction: column; 
     align-items: center;
+} */
+
+.search-container {
+    background-image: url('../consultorio.png'); /* CAMBIAR con la ruta de la imagen de former */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);
+    width: 70%;
+    margin-left: 230px;
+    margin-top: 50px;
+}
+
+#form-busqueda {
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.search-bar {
+    flex: 1;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    font-size: 16px;
+    outline: none;
+    color: #333;
+    background-color: white;
+}
+
+.search-bar::placeholder {
+    color: lightgray;
+}
+
+.search-button {
+    padding: 20px;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-button img {
+    width: 20px;
+    height: 20px;
 }
     </style>
 <header>
 <figure>
        <img src="../logo.png" alt="logo" class="logo">
     </figure>
-    <nav class="menu" id="NEW-PATIENT"> NEW PATIENT </nav>
-    <nav class="menu"> <a href="./formerpatient.html"> FORMER PATIENT </a></nav>
+    <nav class="menu"> <a href="./newpatient.html"> NEW PATIENT </a></nav>
+    <nav class="menu" id="FORMER-PATIENT"> FORMER PATIENT </nav>
     <nav class="menu"> <a href="./aboutus.html"> ABOUT US</a></nav>
     <figure>
         <img src="../perfil.png" alt="perfil" class="perfil">
     </figure>
 </header>
     <section class="fondo">
-        <h1>Add a new patient</h1>
-       
-        <div id="form-container">
-        <form onSubmit="return sendRequest(event)" id="myForm">  
-            <container class="data"> 
-            <div class="formulario-contenedor">  
-                <div class="form-group">
-                    <label class="label">NAME AND SURNAME:</label>
-                    <input class="subrayado" type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label class="label" id="medical">MEDICAL ASSURANCE:</label>
-                    <input class="subrayado" type="number" id="obrasocial" required>
-                </div>
-                <div class="form-group">
-                    <label class="label" >ID:</label>
-                    <input class="subrayado" type="number" id="id" required>
-                </div>
-                <div class="form-group" >
-                    <label class="label">EMAIL ADRESS:</label>
-                    <input class="subrayado" type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label class="label">DATE OF BIRTH:</label>
-                    <input class="subrayado" type="datetime" id="date" required>
-                </div>
-            </div>    
-            <button class="submit">Submit</button>
-            </container>
-        </form>  
+        <h1>Search for a former patient</h1>
+    </section>
+    <body>
+        <div class="search-container">
+            <form id="form-busqueda" action="#" method="get">
+                <input type="text" class="search-bar" placeholder="Search for a former patient">
+                <button type="submit" class="search-button">
+                    <img src="../lupa.png" alt="Search">
+                </button>
+            </form>
         </div>
-
-        <form onSubmit="return sendRequest(event)" id="table-container" class="hidden">
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>FEV1 Pre-BD Value</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body">
-                    <tr>
-                        <td>
-                            <div class="input-wraper">
-                                <input type="text" name="fev1_pre_bd_value" required/>
-                                <h2 class="right-heading">Texto 1</h2>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>FVC Pre-BD Value</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="input-wraper">
-                                <input type="text" name="fvc_pre_bd_value_2" required/>
-                                <h2 class="right-heading">Texto 2</h2>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <button type="submit" class="submit-btn">Submit</button>
-        </form>
-
-       <script>
-            document.addEventListener('DOMContentLoaded', function() {
-              const form = document.getElementById('myForm');
-              const formContainer = document.getElementById('form-container');
-              const tableContainer = document.getElementById('table-container');
-              const tableBody = document.getElementById('table-body');
-        
-              form.addEventListener('submit', function(event) {
-                event.preventDefault(); // Evita el envío del formulario de la forma tradicional
-        
-                // Oculta el formulario y muestra la tabla
-                formContainer.classList.add('hidden');
-                tableContainer.classList.remove('hidden');
-              });
-            });
-          </script> 
-</section>
-</body>
+    </body>
 </html>
